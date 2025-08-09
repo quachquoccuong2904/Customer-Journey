@@ -8,13 +8,13 @@ Before proceeding with this step, please refer to the Business Analyst's documen
 
 ### 2.1. Create Schema for Staging Zone
 
-<img width="1117" height="644" alt="Image" src="https://github.com/user-attachments/assets/09d3061d-9f86-4686-acbb-0a1ab650e85f" />
+    <img width="1117" height="644" alt="Image" src="https://github.com/user-attachments/assets/09d3061d-9f86-4686-acbb-0a1ab650e85f" />
 
 Data flow from the Source Layer into the Staging Zone, with the purpose of standardizing the data into a consistent state, making it easier for users to track the data flow.
 
 ### 2.2. Create Schema for Reconciliaton Zone
 
-<img width="1069" height="749" alt="Image" src="https://github.com/user-attachments/assets/c63ebfb4-b47a-47c7-a15e-176880259314" />
+    <img width="1069" height="749" alt="Image" src="https://github.com/user-attachments/assets/c63ebfb4-b47a-47c7-a15e-176880259314" />
 
 At this layer, all data has been standardized and is ready for analytical use. To effectively support the customer journey, I need to design a suitable Data Warehouse layer that ensures scalability, fast data access, and accurate decision-making support:
 
@@ -42,19 +42,19 @@ In addition to tables with direct mappings (1-1 mapping), several other tables m
 
 To perform this step, I used an ETL tool - SQL Server Integration Services (SSIS) - within the Visual Studio environment.
 
-<img width="776" height="304" alt="Image" src="https://github.com/user-attachments/assets/d4a001f1-6c78-4d77-825d-1c42b7afe447" />
+    <img width="776" height="304" alt="Image" src="https://github.com/user-attachments/assets/d4a001f1-6c78-4d77-825d-1c42b7afe447" />
 
 Several issues were encountered during the process:
 
 **STAGING_Post_eKYC:**
 The `IS_KYC` column is currently in Unicode String format (DT_WSTR), whereas the destination requires it in String format (DT_STR). Therefore, a conversion step is necessary, using Code Page 1252 (ANSI - Latin I).
 
-<img width="303" height="280" alt="Image" src="https://github.com/user-attachments/assets/755c73c1-3508-4461-8c3f-729976d1ad7c" />
+    <img width="303" height="280" alt="Image" src="https://github.com/user-attachments/assets/755c73c1-3508-4461-8c3f-729976d1ad7c" />
 
 **STAGING_Transactions:**
 The `Transaction_Range` column is currently in String format (DT_STR) at the Source, whereas the Destination requires it in Unicode String format (DT_WSTR). Therefore, a conversion step is necessary to ensure compatibility with the destination schema.
 
-<img width="317" height="253" alt="Image" src="https://github.com/user-attachments/assets/66b5df72-12fd-474f-b68a-acf8d680f4c7" />
+    <img width="317" height="253" alt="Image" src="https://github.com/user-attachments/assets/66b5df72-12fd-474f-b68a-acf8d680f4c7" />
 
 ## 4. Data Quality
 
@@ -72,7 +72,7 @@ To ensure the data is suitable for analysis, reporting, and prediction tasks, I 
 
 [Link to code](https://github.com/quachquoccuong2904/Customer-Journey/blob/main/CASE%202%20-%20METADATA%20MANAGEMENT%20AND%20DATA%20QUALITY/Data%20Quality/Completeness%20and%20Validity.sql)
 
-<img width="1591" height="466" alt="Image" src="https://github.com/user-attachments/assets/e905dc3a-ca18-4874-a712-5fab820a3fdd" />
+    <img width="1591" height="466" alt="Image" src="https://github.com/user-attachments/assets/e905dc3a-ca18-4874-a712-5fab820a3fdd" />
 
 ### 4.2. Accuracy:
 
@@ -91,7 +91,7 @@ To ensure the data is suitable for analysis, reporting, and prediction tasks, I 
 
 [Link to code](https://github.com/quachquoccuong2904/Customer-Journey/blob/main/CASE%202%20-%20METADATA%20MANAGEMENT%20AND%20DATA%20QUALITY/Data%20Quality/Accuracy.sql)
 
-<img width="1402" height="390" alt="Image" src="https://github.com/user-attachments/assets/596b5a75-5af4-4f5f-b8d8-538e86739a1d" />
+    <img width="1402" height="390" alt="Image" src="https://github.com/user-attachments/assets/596b5a75-5af4-4f5f-b8d8-538e86739a1d" />
 
 **Remarks:** 
 
@@ -113,11 +113,11 @@ To ensure the data is suitable for analysis, reporting, and prediction tasks, I 
 
 For the data obtained from the query above and using an Excel Pivot Table, we have the following report:
 
-<img width="690" height="228" alt="Image" src="https://github.com/user-attachments/assets/275808e3-9ea8-4b03-ae8d-19718dab8649" />
-
-<img width="1298" height="991" alt="Image" src="https://github.com/user-attachments/assets/20f445f7-e73f-4f60-aa94-6e8d0e551b30" />
-
-<img width="1652" height="988" alt="Image" src="https://github.com/user-attachments/assets/54d40b8f-a545-415c-9f38-85ccbc416156" />
+    <img width="690" height="228" alt="Image" src="https://github.com/user-attachments/assets/275808e3-9ea8-4b03-ae8d-19718dab8649" />
+    
+    <img width="1298" height="991" alt="Image" src="https://github.com/user-attachments/assets/20f445f7-e73f-4f60-aa94-6e8d0e551b30" />
+    
+    <img width="1652" height="988" alt="Image" src="https://github.com/user-attachments/assets/54d40b8f-a545-415c-9f38-85ccbc416156" />
 
 **Remarks:**
 

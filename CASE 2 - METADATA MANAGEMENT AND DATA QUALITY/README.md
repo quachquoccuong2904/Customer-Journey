@@ -72,7 +72,7 @@ To ensure the data is suitable for analysis, reporting, and prediction tasks, I 
 
 [Link to code](https://github.com/quachquoccuong2904/Customer-Journey/blob/main/CASE%202%20-%20METADATA%20MANAGEMENT%20AND%20DATA%20QUALITY/Data%20Quality/Completeness%20and%20Validity.sql)
 
-    <img width="1591" height="466" alt="Image" src="https://github.com/user-attachments/assets/e905dc3a-ca18-4874-a712-5fab820a3fdd" />
+<img width="1591" height="466" alt="Image" src="https://github.com/user-attachments/assets/e905dc3a-ca18-4874-a712-5fab820a3fdd" />
 
 ### 4.2. Accuracy:
 
